@@ -17,4 +17,16 @@
 - Dynamic Filtering
     - Filter parameters dynamically using MappingJacksonValue
     - see ```DynamicFiltering, DynamicFilteringModel ```   
+- Versioning API
+    - refer controller ```ContactVersionController```
+    - uri versioning
+        - http://localhost:8080/v2/address
+    - parameter versioning
+        - http://localhost:8080/address/param?version=2
+    - header versioning
+        - http://localhost:8080/address/header
+        - and pass ```API-VERSION = 2``` in the header    
+    - accept header version/mime type (content negotiation or accept versioning) using accept in header
+        - http://localhost:8080/address/produces
+        - and pass ```Accept = application/com.venkyms.app-v1+json```
     
