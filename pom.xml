@@ -38,6 +38,12 @@
             <artifactId>spring-data-rest-hal-browser</artifactId>
         </dependency>
 
+        <!-- Spring security for authentication -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- hateoas - used to send resource like links back in the rest response -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
