@@ -1,5 +1,6 @@
 # resful-web-services
 - Spring boot
+- Bean validation
 - Content Negotiation 
     - in header send ```Accept = "application/xml"```, then the response should come in xml
 - Internationalization
@@ -36,4 +37,16 @@
     - you can also configure default username password in application.properties
         - ```spring.security.user.name=```
         - ```spring.security.user.password=```    
-    
+- JPA
+    - Add ```spring-boot-starter-data-jpa``` dependency and here I am using H2 in-memory DB
+    - Add below properties in application.properties
+        - ```spring.jpa.show-sql=true``` 
+        - ```spring.h2.console.enabled=true```     
+    - modify User class to entity class and restart, this should create a User table for the entity class
+        - create a data.sql file to feed some data, and restart
+    - verify the data in h2 using h2-console
+        - http://localhost:8080/h2-console
+        - jdbc url ```jdbc:h2:mem:testdb```
+        - on querying user, data should be shown
+    - create UserRepository, TweetsRespository, UserJPAResource and use the h2 data
+        - http://localhost:8080/jpa/users
